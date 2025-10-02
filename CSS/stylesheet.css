@@ -1,3 +1,11 @@
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+    body{
+        margin: 0px auto;
+        max-width: 750px;
+    }
+
+#gifEx{
+    width: 100%;
+}
