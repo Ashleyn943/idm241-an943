@@ -1,0 +1,24 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    body{
+        margin: 3rem auto;
+        max-width: 850px;
+    }
+
+#gifEx{
+    width: 100%;
+}
+
+    .annotatedLyric{
+        background-color: rgb(233, 233, 233);
+        padding: 0.2rem auto;
+    }
+        a.annotatedLyric:hover{
+            background-color: rgb(164, 148, 204);
+            cursor: pointer;
+        }
+
+        a.annotatedLyric:hover{
+            background-color: rgb(164, 148, 204);
+        }
