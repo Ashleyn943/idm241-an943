@@ -58,3 +58,14 @@ p{
     display: none;
 }
 
+/*For dual column*/
+    .column {
+    float: left;
+    width: 50%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
