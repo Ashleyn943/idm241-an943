@@ -1,0 +1,71 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    body{
+        margin: 3rem auto;
+        max-width: 950px;
+    }
+
+p{
+    font-size: 1.25rem;
+}
+    .annotationNotes{
+        font-size: 1rem;
+    }
+
+#gifEx{
+    width: 100%;
+}
+
+    
+#Build{
+    display: grid;
+    grid-template-columns: 1.75fr 1.25fr;
+}
+    .annotatedLyric{
+            background-color: rgb(233, 233, 233);
+            padding: 0.2rem auto;
+        }
+            a.annotatedLyric:hover{
+                background-color: rgb(164, 148, 204);
+                cursor: pointer;
+            }
+
+            .clicked{
+                background-color: rgb(164, 148, 204);
+            }
+.annotation-pop-up{
+    border-left: .2rem solid black;
+    padding-left: .5rem;
+}
+
+    .annotationHeader{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        vertical-align: middle;
+    }
+        .contributorCount{
+            font-weight: normal;
+            text-decoration: underline;
+        }
+        
+        h4{
+            margin: .5rem 0;
+        }
+
+
+.hideMe{
+    display: none;
+}
+
+/*For dual column*/
+    .column {
+    float: left;
+    width: 50%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
