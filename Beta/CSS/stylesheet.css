@@ -1,3 +1,8 @@
+
+*{
+  box-sizing:border-box;
+}
+
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -62,23 +67,45 @@ p{
     display: none;
 }
 
-/*For dual column*/
-    .column {
-    float: left;
-    width: 50%;
-    }
+img{
+            width: 75%;
+            height: auto;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
 
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
+
+@media screen and (min-width: 1000px) {
+/*For dual column*/
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
+        .column{
+            float: left;
+        }
 
 /*For image formatting*/
-    .imgBlock{
+    .imgTitle{
         text-align: center;
     }
 
     .imgBlock{
+        margin: 2rem 5rem;
         display: grid;
+        grid-template-columns: 55vh 55vh;
+        grid-row: auto auto;
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+        text-align: center;
+    }
+        img{
+            width: 100%;
+            height: auto;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
     }
