@@ -13,6 +13,10 @@ p{
         font-size: 1rem;
     }
 
+    ul{
+        margin: 0;
+    }
+
 #gifEx{
     width: 100%;
 }
@@ -68,4 +72,13 @@ p{
     content: "";
     display: table;
     clear: both;
+    }
+
+/*For image formatting*/
+    .imgBlock{
+        text-align: center;
+    }
+
+    .imgBlock{
+        display: grid;
     }
