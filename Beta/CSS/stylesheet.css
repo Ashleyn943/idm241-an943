@@ -33,24 +33,22 @@ p{
     }
 
     .imgNumb{
+        font-size: 1.25rem;
         margin-bottom: 0;
     }
-
-img{
-    border: .2rem solid rgb(111, 92, 158);
-}
 
 hr{
     margin: 1rem auto;
 }
 
-img{
-            width: 75%;
-            height: auto;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-        }
+    img{
+        border: .2rem solid rgb(111, 92, 158);
+        width: 75%;
+        height: auto;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
 
 /*For Build*/
     
