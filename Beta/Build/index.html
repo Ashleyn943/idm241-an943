@@ -4,12 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/stylesheet.css">
-    <title>Beta Description</title>
+    <title>Alpha Build</title>
 </head>
 <body>
-    <h2><b>Microinteraction - Lyric Annotations on Genius: <a href=https://genius.com/Huntr-x-ejae-audrey-nuna-rei-ami-and-kpop-demon-hunters-cast-what-it-sounds-like-lyrics target="_blank">Here</a></b></h2> 
-
-    <div class="row">
+    <h2><b>Alpha Build</b></h2> 
+        <div id="Build">
+            <div class="lyrics">
+                <p class="lyricText">
+                    [Verse 1: Rumi]<br>
+                    Nothing but the truth now<br>
+                    Nothing but the proof of what I am<br>
+                    <a class="annotatedLyric" id="firstlyric">
+                        The worst of what I came from, patterns I'm ashamed of
+                    </a><br>
+                    Things that even I don't understand<br>
+                    I tried to fix it, I tried to fight it<br>
+                    My head was twisted, my heart divided<br>
+                    My lies all collided<br>
+                </p>
+            </div>
+            <div class="annotation-pop-up hideMe" id="FirstPopUp">
+                <div class="annotationHeader">
+                    <h4>Genius Annotation</h4>
+                    <h4 class="contributorCount">1 Countributor</h4>
+                </div>
+                <p class="annotationNotes">
+                    Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
+                    <br><br>
+                    However, after her identity was exposed during the Idol Awards, she finally learnt to accept her true self and embrace the imperfections that made her who she is now.
+                </p>
+            </div>
+        </div>
+<hr>
+   <div class="row">
         <div class="column">
             <ul>
                 <li class="headers">Triggers</li>
@@ -259,30 +286,6 @@
             </ul>
         </div>
     </div> 
-    <hr>
-    <h2>Visual Example:</h2>
-        <h3 class="imgTitle">Highlighted Text Examples</h3>
-            <div class="imgBlock">
-                <div><p class="imgNumb"><b>1</b></p><img src="Media/highlight-hover-off.jpg" alt="Image of Highlighted Text on Genius"></div>
-                <div><p class="imgNumb"><b>2</b></p><img src="Media/highlight-hover-on.jpg" alt="Image of cursor hovering over Highlighted Text on Genius"></div>
-                <div><p class="imgNumb"><b>3</b></p><img src="Media/highlight-slide-1.jpg" alt="Image of what happens when clicking Highlighted Text on Genius"></div>
-                <div><p class="imgNumb"><b>4</b></p><img src="Media/highlight-clicked.jpg" alt="Image of what happens when clicking Highlighted Text on Genius"></div>
-                <div><p class="imgNumb"><b>5</b></p><img src="Media/highlight-clicked-hover-off.jpg" alt="Image of hovering off highlighted text after clicking it on Genius"></div>
-            </div>
-            <hr>
-        <h3 class="imgTitle">Share Button Examples</h3>
-            <div class="imgBlock">
-                <div><p class="imgNumb"><b>1</b></p><img src="Media/shareBtn-hover-off.jpg" alt="Image of annotation with cursor near Share Button"></div>
-                <div><p class="imgNumb"><b>2</b></p><img src="Media/shareBtn-hover-on.jpg" alt="Image of cursor hovering over Share Button on Genius"></div>
-                <div><p class="imgNumb"><b>3</b></p><img src="Media/shareBtn-animation.jpg" alt="Image of what happens when clicking Share Button on Genius"></div>
-                <div><p class="imgNumb"><b>4</b></p><img src="Media/shareBtn-click.jpg" alt="Image of what happens when clicking Share Button on Genius"></div>
-            </div>
-            <hr>
-        <h3 class="imgTitle">Copy Link Button Examples</h3>
-            <div class="imgBlock">
-                <div><p class="imgNumb"><b>1</b></p><img src="Media/copyBtn-hover-off.jpg" alt="Image of Share module on Genius"></div>
-                <div><p class="imgNumb"><b>2</b></p><img src="Media/copyBtn-hover-on.jpg" alt="Image of cursor hovering over Copy Button on Genius"></div>
-                <div><p class="imgNumb"><b>3</b></p><img src="Media/copyBtn-clicked.jpg" alt="Image of what happens when clicking Copy Button on Genius"></div>
-            </div>
+     <script src="postload.js"></script>
 </body>
 </html>
