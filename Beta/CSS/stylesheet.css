@@ -96,7 +96,7 @@ img{
         margin: 2rem 5rem;
         display: grid;
         grid-template-columns: 55vh 55vh;
-        grid-row: auto auto;
+        grid-row: auto auto auto;
         grid-column-gap: 20px;
         grid-row-gap: 10px;
         text-align: center;
