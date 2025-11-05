@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="CSS/stylesheet.css">
     <title>Alpha Build</title>
 </head>
@@ -14,25 +15,46 @@
                     [Verse 1: Rumi]<br>
                     Nothing but the truth now<br>
                     Nothing but the proof of what I am<br>
-                    <a class="annotatedLyric" id="firstlyric">
+                    <a class="annotatedLyric" id="firstlyric" onclick="animation()">
                         The worst of what I came from, patterns I'm ashamed of
                     </a><br>
                     Things that even I don't understand<br>
                     I tried to fix it, I tried to fight it<br>
                     My head was twisted, my heart divided<br>
                     My lies all collided<br>
+                    I don't know why I didn't trust you to be on my side<br>
                 </p>
             </div>
-            <div class="annotation-pop-up hideMe" id="FirstPopUp">
-                <div class="annotationHeader">
-                    <h4>Genius Annotation</h4>
-                    <h4 class="contributorCount">1 Countributor</h4>
+            <div>
+                <div class="annotation-pop-up" id="FirstPopUp">
+                    <div class="annotationHeader">
+                        <h4>Genius Annotation</h4>
+                        <h4 class="contributorCount">1 Countributor</h4>
+                    </div>
+                    <p class="annotationNotes">
+                        Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
+                        <br><br>
+                        However, after her identity was exposed during the Idol Awards, she finally learnt to accept her true self and embrace the imperfections that made her who she is now.
+                    </p>
+                    <div class="annotationHeader">
+                        <div></div>
+                        <div id="shareContents">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 18" class="shareIcon">
+                                <path d="M7.272 12.69V3.027L4.727 5.572 3.615 4.467 8.082 0l4.303 4.304-1.104 1.104L8.835 2.97v9.72H7.272Zm6.504 3.747V6.047h1.563V18H.661V6.046h1.563v10.391h11.552Z"></path>
+                            </svg>
+                            <h4 ><a id="shareBtn">Share</a></h4>
+                        </div>
+                    </div>
                 </div>
-                <p class="annotationNotes">
-                    Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
-                    <br><br>
-                    However, after her identity was exposed during the Idol Awards, she finally learnt to accept her true self and embrace the imperfections that made her who she is now.
-                </p>
+                <div class="share-module">
+                    <h3 class="shareTitle">Share this annotation</h3>
+                    <div class="shareLink">
+                        <p class="shareTypeLabel">Share URL</p>
+                        <input class="URLhome" id="URLSelect" type="text" value="https://genius.com/36371006" readonly>
+                        <button id="copyURL" type="button">Copy</button>
+                        <div id="Checked" class="unconfirmed">&#9989;</div>
+                    </div>
+                </div>
             </div>
         </div>
 <hr>
@@ -143,9 +165,9 @@
                                     </ul>
                                 <li>Click</li>
                                     <ul>
-                                        <li>Text changes from "Copy" to "Copied" for 2 second before changing back to "Hover On" state</li>
-                                        <li>Button background color changes to white and text color changes to black for 2 second before changing back to "Hover On" state</li>
-                                        <li>Green checkmark appears on right side of button for 2 second</li>
+                                        <li>Text changes from "Copy" to "Copied" for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
+                                        <li>Button background color changes to white and text color changes to black for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
+                                        <li>Green checkmark appears on right side of button for 1.5 seconds before disappearing</li>
                                         <li>Link copies to user's clipboard</li>
                                     </ul>
                             </ul> 
@@ -235,9 +257,9 @@
                                     </ul>
                                 <li>Click</li>
                                     <ul>
-                                        <li>Text changes from "Copy" to "Copied" for 2 second before changing back to "Hover On" state</li>
-                                        <li>Button background color changes to white and text color changes to black for 2 second before changing back to "Hover On" state</li>
-                                        <li>Green checkmark appears on right side of button for 2 second</li>
+                                        <li>Text changes from "Copy" to "Copied" for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
+                                        <li>Button background color changes to white and text color changes to black for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
+                                        <li>Green checkmark appears on right side of button for 1.5 seconds before disappearing</li>
                                     </ul>
                             </ul> 
                     </ul>
@@ -262,7 +284,7 @@
                                     <ul>
                                         <li>Click</li>
                                             <ul>
-                                                <li>Text module disappears via slide out at 2/3 of page over the span of about 1 second</li>
+                                                <li>Text module disappears instantly</li>
                                             </ul>
                                     </ul>
                             </ul>

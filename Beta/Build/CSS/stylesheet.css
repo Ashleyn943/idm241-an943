@@ -7,8 +7,8 @@ html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
     body{
-        margin: 3rem auto;
-        max-width: 950px;
+        margin: 2.5rem auto;
+        max-width: 975px;
     }
 
 p{
@@ -33,17 +33,35 @@ p{
     }
 
     .imgNumb{
+        font-size: 1.25rem;
         margin-bottom: 0;
     }
 
-img{
-    border: .2rem solid rgb(111, 92, 158);
+hr{
+    margin: 1rem auto;
 }
 
-    
+    img{
+        border: .2rem solid rgb(111, 92, 158);
+        width: 75%;
+        height: auto;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+/*For Build*/
 #Build{
-    display: grid;
-    grid-template-columns: 1.75fr 1.25fr;
+    margin-bottom: 2rem;
+    height: 550px;
+}
+
+.lyrics {
+  background-color: white;
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  z-index: 3;
 }
     .annotatedLyric{
             background-color: rgb(233, 233, 233);
@@ -57,9 +75,13 @@ img{
             .clicked{
                 background-color: rgb(164, 148, 204);
             }
+
 .annotation-pop-up{
     border-left: .2rem solid black;
     padding-left: .5rem;
+    width: 375px;
+    height: auto;
+    z-index: 2;
 }
 
     .annotationHeader{
@@ -70,25 +92,105 @@ img{
         .contributorCount{
             font-weight: normal;
             text-decoration: underline;
+            text-align: right;
         }
-        
+    #shareContents{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        text-align: right;
+        justify-content: flex-end;
+    }
+        #shareBtn{
+            font-weight: normal;
+            text-align: right;
+            text-decoration: underline;
+        }
+            #shareBtn:hover{
+                font-weight: bolder;
+                cursor: pointer;
+            }
+        .shareIcon{
+            height: 1em;
+            width: auto;
+        }
+
         h4{
             margin: .5rem 0;
         }
 
-
-.hideMe{
-    display: none;
+.clicked {
+  background-color: rgb(164, 148, 204);
 }
 
-img{
-            width: 75%;
-            height: auto;
-            display:flex;
-            align-items:center;
-            justify-content:center;
+.animate {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(600px);
+    opacity: 1;
+  }
+}
+
+/*share module*/
+
+.share-module{
+    width: 375px;
+    background-color: white;
+    border-top: .1rem solid black;
+    z-index: -1;
+    float: right;
+    display: none;
+}
+    .shareTitle{
+        text-align: center;
+    }
+
+    .shareLink{
+        display: grid;
+        grid-template-columns: 1.5fr 1.25fr 1fr .23fr;
+        gap: .25rem;
+        align-items: center;
+        text-align: center;
+    }
+        .shareTypeLabel{
+            font-size: .9rem;
+            font-weight: 500;
+        }
+        .URLhome{
+            border-radius: .25rem;
+            font-size: .9rem;
         }
 
+        #copyURL{
+            background-color: white;
+            border-radius: .75rem;
+            padding: .25rem 1rem;
+            font-size: 1rem;
+        }
+            #copyURL:hover{
+                background-color: black;
+                color:white;
+                cursor: pointer;
+            }
+
+            #copyURL:focus{
+                background-color: white;
+                color: black;
+            }
+        #Checked{
+            padding: 0;
+            margin: 0;
+        }
+            .unconfirmed{
+                display: none;
+            }
 
 @media screen and (min-width: 1000px) {
 /*For dual column*/
@@ -107,13 +209,12 @@ img{
     }
 
     .imgBlock{
-        margin: 2rem 5rem;
         display: grid;
-        grid-template-columns: 55vh 55vh;
+        grid-template-columns: 30rem 30rem;
         grid-row: auto auto auto;
         grid-column-gap: 20px;
         grid-row-gap: 10px;
-        text-align: center;
+        align-self: center;
     }
         img{
             width: 100%;

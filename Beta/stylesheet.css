@@ -56,6 +56,11 @@ hr{
     display: grid;
     grid-template-columns: 1.75fr 1.25fr;
 }
+
+.lyrics{
+    background-color: white;
+    z-index: 3;
+}
     .annotatedLyric{
             background-color: rgb(233, 233, 233);
             padding: 0.2rem auto;
@@ -68,10 +73,42 @@ hr{
             .clicked{
                 background-color: rgb(164, 148, 204);
             }
+
 .annotation-pop-up{
     border-left: .2rem solid black;
     padding-left: .5rem;
+    z-index: 2;
+    display: none; 
+    left: 100px; 
+    transition: 2s;
 }
+    .annotation-pop-up.active {
+        display: block; 
+        left: 600px; 
+        animation: slide 2s;
+    }
+        @keyframes slide {
+            from {
+                opacity: 0;
+                left: 100px;
+            }
+            to {
+                opacity: 1;
+                left: 600px;
+            }
+            }
+        @keyframes slideback {
+            from {
+                display:block;
+                opacity: 1;
+                left: 600px;
+            }
+            to {
+                display:none;
+                opacity: 0;
+                left: 100px;
+            }
+        }
 
     .annotationHeader{
         display: grid;
