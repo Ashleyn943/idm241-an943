@@ -11,6 +11,7 @@ const checkmark = document.getElementById('Checked');
 function animation() {
   annotation.classList.toggle("animate");
   firsthighlight.classList.toggle("clicked");
+  $('.share-module').slideUp("slow");
 };
 
 /*Slide Function for Share Module*/
