@@ -26,10 +26,10 @@
                 </p>
             </div>
             <div>
-                <div class="annotation-pop-up" id="FirstPopUp">
+                <div class="annotation-pop-up animateOut" id="FirstPopUp">
                     <div class="annotationHeader">
-                        <h4>Genius Annotation</h4>
-                        <h4 class="contributorCount">1 Countributor</h4>
+                        <h4 class="annotationLabel">Genius Annotation</h4>
+                        <h4 class="contributorCount">1 Contributor</h4>
                     </div>
                     <p class="annotationNotes">
                         Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
@@ -42,17 +42,19 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 18" class="shareIcon">
                                 <path d="M7.272 12.69V3.027L4.727 5.572 3.615 4.467 8.082 0l4.303 4.304-1.104 1.104L8.835 2.97v9.72H7.272Zm6.504 3.747V6.047h1.563V18H.661V6.046h1.563v10.391h11.552Z"></path>
                             </svg>
-                            <h4 ><a id="shareBtn">Share</a></h4>
+                            <h4><a id="shareBtn" class="">Share</a></h4>
                         </div>
                     </div>
                 </div>
                 <div class="share-module">
                     <h3 class="shareTitle">Share this annotation</h3>
+                    <div id="Checked" class="unconfirmed">&#9989;</div>
                     <div class="shareLink">
                         <p class="shareTypeLabel">Share URL</p>
                         <input class="URLhome" id="URLSelect" type="text" value="https://genius.com/36371006" readonly>
-                        <button id="copyURL" type="button">Copy</button>
-                        <div id="Checked" class="unconfirmed">&#9989;</div>
+                        <button id="copyURL" type="button">
+                            <span class="text">Copy</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -167,7 +169,7 @@
                                     <ul>
                                         <li>Text changes from "Copy" to "Copied" for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
                                         <li>Button background color changes to white and text color changes to black for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
-                                        <li>Green checkmark appears on right side of button for 1.5 seconds before disappearing</li>
+                                        <li>Green checkmark appears above the share link in module for 1.5 seconds before disappearing</li>
                                         <li>Link copies to user's clipboard</li>
                                     </ul>
                             </ul> 
@@ -259,7 +261,7 @@
                                     <ul>
                                         <li>Text changes from "Copy" to "Copied" for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
                                         <li>Button background color changes to white and text color changes to black for 1.5 seconds before changing back to "Hover On" or "Hover Off" state depending where cursor is</li>
-                                        <li>Green checkmark appears on right side of button for 1.5 seconds before disappearing</li>
+                                        <li>Green checkmark appears above the share link in module for 1.5 seconds before disappearing</li>
                                     </ul>
                             </ul> 
                     </ul>
@@ -277,14 +279,14 @@
                                     <ul>
                                          <li>Click</li>
                                             <ul>
-                                                <li>Text module appears via slide in from the left at 2/3 of page over the span of about 1 second</li>
+                                                <li>Text module appears via slide in from left to right at 2/3 of page over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                                 <li class="underline">Clicked State</li>
                                     <ul>
                                         <li>Click</li>
                                             <ul>
-                                                <li>Text module disappears instantly</li>
+                                                <li>Text module disappears via slide out from right to left at 2/3 of page over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                             </ul>
@@ -294,14 +296,14 @@
                                     <ul>
                                         <li>Click</li>
                                             <ul>
-                                                <li>Module appears via slide in below the text module over the span of about 1 second</li>
+                                                <li>Module appears via slide in below the text module over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                                 <li class="underline">Clicked State</li>
                                     <ul>
                                         <li>Click</li>
                                             <ul>
-                                                <li>Module disappears via slide out below the text module over the span of about 1 second</li>
+                                                <li>Module disappears via slide out below the text module over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                             </ul>

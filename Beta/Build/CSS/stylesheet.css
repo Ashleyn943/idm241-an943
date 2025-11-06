@@ -52,7 +52,7 @@ hr{
 
 /*For Build*/
 #Build{
-    margin-bottom: 2rem;
+    margin: 1.5rem .5rem;
     height: 550px;
 }
 
@@ -89,6 +89,13 @@ hr{
         grid-template-columns: 2fr 1fr;
         vertical-align: middle;
     }
+        h4{
+            margin: .5rem 0;
+            font-weight: normal;
+        }
+        .annotationLabel{
+            font-weight: bolder;
+        }
         .contributorCount{
             font-weight: normal;
             text-decoration: underline;
@@ -102,7 +109,6 @@ hr{
         justify-content: flex-end;
     }
         #shareBtn{
-            font-weight: normal;
             text-align: right;
             text-decoration: underline;
         }
@@ -110,13 +116,12 @@ hr{
                 font-weight: bolder;
                 cursor: pointer;
             }
+            .boldText{
+                font-weight: bolder;
+            }
         .shareIcon{
             height: 1em;
             width: auto;
-        }
-
-        h4{
-            margin: .5rem 0;
         }
 
 .clicked {
@@ -138,8 +143,28 @@ hr{
   }
 }
 
-/*share module*/
+.animateOut {
+  animation: fadeOut 2s ease-out forwards;
+}
 
+@keyframes fadeOut {
+  from {
+    transform: translateX(600px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+}
+
+@starting-style{
+    .animateOut {
+        display: none;
+    }
+}
+
+/*share module*/
 .share-module{
     width: 375px;
     background-color: white;
@@ -154,7 +179,7 @@ hr{
 
     .shareLink{
         display: grid;
-        grid-template-columns: 1.5fr 1.25fr 1fr .23fr;
+        grid-template-columns: 1.5fr 1.25fr 1.5fr;
         gap: .25rem;
         align-items: center;
         text-align: center;
@@ -184,15 +209,38 @@ hr{
                 background-color: white;
                 color: black;
             }
-        #Checked{
-            padding: 0;
-            margin: 0;
-        }
-            .unconfirmed{
-                display: none;
+
+            #copyURL .text {
+                transition: opacity 0.4s ease;
+                opacity: 1;
             }
 
+            #copyURL .fade {
+            opacity: 0;
+            }
+
+        #Checked{
+            margin-top: .1rem;
+            text-align: center;
+            -webkit-transition: opacity .5s ease-in-out;
+            -moz-transition: opacity .5s ease-in-out;
+            -ms-transition: opacity .5s ease-in-out;
+            -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+        }
+            .unconfirmed{
+                opacity: 0;
+            }
+@media screen and (min-width: 600px) {
+
+}
+
 @media screen and (min-width: 1000px) {
+#Build{
+    margin: 2rem 0rem;
+    height: 550px;
+}
+
 /*For dual column*/
 
     .row {
