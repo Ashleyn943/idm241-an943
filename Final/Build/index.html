@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS/stylesheet.css">
-    <title>Beta Build</title>
+    <title>Final Build</title>
 </head>
 <body>
-    <h2><b>Beta Build</b></h2> 
+    <h2><b>Final Build</b></h2> 
         <div id="Build">
-            <div class="tooltip">
-                <p>created by</p>
-                <img class="pfp" src="Media/creator-pfp.png"> 
-                <p>black_tigress_333</p>
-            </div>
+            <br>
             <div class="lyrics">
                 <p class="lyricText">
                     [Verse 1: Rumi]<br>
@@ -36,15 +33,40 @@
                         <h4 class="annotationLabel">Genius Annotation</h4>
                         <div>
                             <h4 class="contributorCount"><a id="contributors">1 Contributor</a></h4>
+                            <span class="tooltip">
+                                <p>created by</p>
+                                <img class="pfp" src="Media/creator-pfp.png"> 
+                                <p>black_tigress_333</p>
+                            </span>
                         </div>
                     </div>
-                    <p class="annotationNotes">
-                        Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
-                        <br><br>
-                        However, after her identity was exposed during the Idol Awards, she finally learnt to accept her true self and embrace the imperfections that made her who she is now.
-                    </p>
+                    <div class="contributordiv">
+                        <div class="contriFormat">
+                            <span class="contributorCredit">
+                                <p>created by</p>
+                                <img id="pfpContri" src="Media/creator-pfp.png"> 
+                                <p>black_tigress_333</p>
+                            </span>
+                            <p id="ContriPercentage">100%</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="annotationNotes">
+                            Initially, Rumi was deeply ashamed of her demon heritage and her demon patterns were a reminder of who she really was inside. She grew to hate her demon identity and tried to cover it no matter the cost.
+                            <br><br>
+                            However, after her identity was exposed during the Idol Awards, she finally learnt to accept her true self and embrace the imperfections that made her who she is now.
+                        </p>
+                    </div>
                     <div class="annotationHeader">
-                        <div></div>
+                        <div id="likeCount">
+                            <a class="like" onclick="liked(event)">
+                                <i id="like" class="fa fa-thumbs-up"></i>
+                            </a>
+                            <h3 id="counter">25</h3>
+                            <a class="dislike" onclick="liked(event)">
+                                <i id="dislike" class="fa fa-thumbs-down"></i>
+                            </a>
+                        </div>
                         <div id="shareContents">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 18" class="shareIcon">
                                 <path d="M7.272 12.69V3.027L4.727 5.572 3.615 4.467 8.082 0l4.303 4.304-1.104 1.104L8.835 2.97v9.72H7.272Zm6.504 3.747V6.047h1.563V18H.661V6.046h1.563v10.391h11.552Z"></path>
@@ -67,7 +89,7 @@
             </div>
         </div>
 <hr>
-   <div class="row">
+    <div class="row">
         <div class="column">
             <ul>
                 <li class="headers">Triggers</li>
@@ -85,6 +107,18 @@
                                 <li>Click</li>
                             </ul>
                         <li><b>Copy Link Button</b> - Bottom left of module that appears after clicking "Share" button within the text module that appears after clicking on highlighted text</li>
+                            <ul>
+                                <li>Hover On</li>
+                                <li>Hover Off</li>
+                                <li>Click</li>
+                            </ul>
+                        <li><b>Contributor Label</b> - Top right of module after clicking the highlighted text at the middle left of the page under the header</li>
+                            <ul>
+                                <li>Hover On</li>
+                                <li>Hover Off</li>
+                                <li>Click</li>
+                            </ul>
+                        <li><b>Like Button</b> - Bottom left of module that appears after clicking the highlighted text at the middle left of the page under the header</li>
                             <ul>
                                 <li>Hover On</li>
                                 <li>Hover Off</li>
@@ -180,6 +214,77 @@
                                         <li>Link copies to user's clipboard</li>
                                     </ul>
                             </ul> 
+                    <li><b>Contributor Label</b></li>
+                            <ul>
+                                <li class="underline">Default State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Text becomes bold</li>
+                                                <li>Label apears above text, stating contributor's name, over the span of 1 second</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Text returns to default state</li>
+                                                <li>Label above text disappears over the span of 1 second</li>
+                                            </ul>
+                                    </ul>
+                                <li class="underline">Clicked State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Text becomes bolder</li>
+                                                <li>Label apears above text, stating contributor's name, over the span of 1 second</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Text returns to bold state</li>
+                                                <li>Label above text disappears over the span of 1 second</li>
+                                            </ul>
+                                    </ul>
+                            </ul> 
+                    <li><b>Like Button</b></li>
+                            <ul>
+                                <li class="underline">Default State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Thumbs up becomes green</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Thumbs up returns to black</li>
+                                            </ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Thumbs up becomes green over the span of .5 second</li>
+                                                <li>Number besides thumbs up goes up by one over the span of .5 second</li>
+                                            </ul>
+                                    </ul>
+                                <li class="underline">Clicked State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                            </ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Thumbs up becomes black over the span of .5 second</li>
+                                                <li>Number besides thumbs up goes down by one over the span of .5 second</li>
+                                            </ul>
+                                    </ul>
+                            </ul> 
             </ul>
         </div>
         <div class="column">
@@ -271,6 +376,75 @@
                                         <li>Green checkmark appears above the share link in module for 1.5 seconds before disappearing</li>
                                     </ul>
                             </ul> 
+                        <li><b>Contributor Label</b></li>
+                            <ul>
+                                <li class="underline">Default State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Text becomes bold</li>
+                                                <li>Label apears above text, stating contributor's name, over the span of 1 second</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Text returns to default state</li>
+                                                <li>Label above text disappears over the span of 1 second</li>
+                                            </ul>
+                                    </ul>
+                                <li class="underline">Clicked State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Text becomes bolder</li>
+                                                <li>Label apears above text, stating contributor's name, over the span of 1 second</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Text returns to bold state</li>
+                                                <li>Label above text disappears over the span of 1 second</li>
+                                            </ul>
+                                    </ul>
+                            </ul> 
+                    <li><b>Like Button</b></li>
+                            <ul>
+                                <li class="underline">Default State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                                <li>Thumbs up becomes green</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                                <li>Thumbs up returns to black</li>
+                                            </ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Thumbs up becomes green over the span of .5 second</li>
+                                                <li>Number besides thumbs up goes up by one over the span of .5 second</li>
+                                            </ul>
+                                    </ul>
+                                <li class="underline">Clicked State</li>
+                                    <ul>
+                                        <li>Hover On</li>
+                                            <ul>
+                                                <li>Cursor changes to select state</li>
+                                            </ul>
+                                        <li>Hover Off</li>
+                                            <ul>
+                                                <li>Cursor changes to default state</li>
+                                            </ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Thumbs up becomes black over the span of .5 second</li>
+                                                <li>Number besides thumbs up goes down by one over the span of .5 second</li>
+                                            </ul>
+                                    </ul>
                     </ul>
 
                 <li class="headers">Loops</li>
@@ -286,14 +460,14 @@
                                     <ul>
                                          <li>Click</li>
                                             <ul>
-                                                <li>Text module appears via slide in from left to right at 2/3 of page over the span of about 2 seconds</li>
+                                                <li>Text module appears via slide in from the left at 2/3 of page over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                                 <li class="underline">Clicked State</li>
                                     <ul>
                                         <li>Click</li>
                                             <ul>
-                                                <li>Text module disappears via slide out from right to left at 2/3 of page over the span of about 2 seconds</li>
+                                                <li>Text module disappears via slide out at 2/3 of page over the span of about 2 seconds</li>
                                             </ul>
                                     </ul>
                             </ul>
@@ -311,6 +485,23 @@
                                         <li>Click</li>
                                             <ul>
                                                 <li>Module disappears via slide out below the text module over the span of about 2 seconds</li>
+                                            </ul>
+                                    </ul>
+                            </ul>
+                         <li><b>Contributor Label</b></li>
+                            <ul>
+                                <li class="underline">Default State</li>
+                                    <ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Module appears via slide in between the annotation text and the annotation heading over the span of 1 seconds</li>
+                                            </ul>
+                                    </ul>
+                                <li class="underline">Clicked State</li>
+                                    <ul>
+                                        <li>Click</li>
+                                            <ul>
+                                                <li>Module disappears via slide out between the annotation text and the annotation heading over the span of 1 seconds</li>
                                             </ul>
                                     </ul>
                             </ul>

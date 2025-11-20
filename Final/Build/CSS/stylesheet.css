@@ -101,6 +101,31 @@ hr{
             text-decoration: underline;
             text-align: right;
         }
+
+#likeCount{
+    display: flex;
+    align-items: center;
+}
+    .fa {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+        .fa:hover, .pressed{
+            color: rgb(36, 198, 9);
+        }
+        .ThumbsUpLink{
+            margin-bottom: .6rem;
+        }
+        .ThumbsDownLink{
+            margin-bottom: .3rem;
+        }
+    #counter{
+        color: rgb(36, 198, 9);
+        font-size: 1.25rem;
+        text-decoration: underline;
+        margin: 1.45rem .6rem 2.05rem;
+    }
+
     #shareContents{
         display: flex;
         align-items: center;
@@ -234,10 +259,19 @@ hr{
 /*Contributor Label*/
 
     .tooltip{
+        background-color: lightgrey;
+        border-radius: .5rem;
         display: flex;
         align-items: center;
         float: right;
         width: 250px;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+        z-index: 1;
+        position: absolute;
+        top: -2rem;
     }
         .tooltip>p{
             display: flex;
@@ -251,7 +285,44 @@ hr{
             height: 8%;
             width: 8%;
         }
+    .contributorCount:hover + .tooltip{
+        opacity: 1;
+    }
+        .contributorCount:hover{
+            font-weight: bolder;
+            cursor: pointer;
+        }
 
+/*Contributor Pop Out*/
+.contributordiv{
+    background-color: lightgrey;
+    display: none;
+}
+    .contriFormat{
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+    }
+    .contributorCredit{
+        display: flex;
+        align-items: center;
+    }
+        .contributorCredit>p{
+            display: flex;
+            font-size: 1rem;
+            margin: .5rem;
+            flex-wrap: nowrap;
+        }
+            #ContriPercentage{
+                text-align: right;
+                font-size: 1rem;
+                margin: .5rem;
+            }
+
+    #pfpContri{
+        border: none;
+        height: auto;
+        width: 9.5%;
+    }
 @media screen and (min-width: 1000px) {
 #Build{
     margin: 2rem 0rem;
