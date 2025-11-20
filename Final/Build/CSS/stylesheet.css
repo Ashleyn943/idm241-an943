@@ -109,6 +109,11 @@ hr{
     .fa {
         font-size: 1.5rem;
         cursor: pointer;
+        -webkit-transition: color .5s;
+        -moz-transition:    color .5s;
+        -ms-transition:     color .5s;
+        -o-transition:      color .5s;
+        transition:         color .5s;
     }
         .fa:hover, .pressed{
             color: rgb(36, 198, 9);
