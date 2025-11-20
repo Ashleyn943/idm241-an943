@@ -66,6 +66,11 @@ hr{
     .annotatedLyric{
             background-color: rgb(233, 233, 233);
             padding: 0.2rem auto;
+            -webkit-transition: background-color .5s;
+            -moz-transition:    background-color .5s;
+            -ms-transition:     background-color .5s;
+            -o-transition:      background-color .5s;
+            transition:         background-color .5s;
         }
             a.annotatedLyric:hover{
                 background-color: rgb(164, 148, 204);
@@ -277,7 +282,7 @@ hr{
         -webkit-transition: opacity 1s ease-in-out;
         z-index: 1;
         position: absolute;
-        top: -2rem;
+        top: -2.5rem;
     }
         .tooltip>p{
             display: flex;
