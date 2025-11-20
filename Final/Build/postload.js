@@ -62,7 +62,6 @@ function liked(event) {
   let counter = parseFloat(document.getElementById('counter').innerHTML);
   var button = event.target.className;
   switch(button){
-  	case 'like':
     case 'fa fa-thumbs-up':
     	if (like_flag==false && dislike_flag==false) {
         counter++;
@@ -80,22 +79,21 @@ function liked(event) {
         thumbsUp.classList.remove('pressed');
       }
     break;
-    case 'dislike':
     case 'fa fa-thumbs-down':
     	if (dislike_flag==false && like_flag==false) {
         counter--;
         dislike_flag=true;
-        thumbsDown.classList.toggle('pressed');
+        thumbsDown.classList.add('pressed');
       } else if (dislike_flag==false && like_flag==true) {
         counter = counter - 2;
         dislike_flag=true;
         like_flag=false;
-        thumbsDown.classList.toggle('pressed');
+        thumbsDown.classList.add('pressed');
         thumbsUp.classList.remove('pressed');
       } else {
       	counter++;
         dislike_flag=false;
-        thumbsDown.classList.toggle('pressed');
+        thumbsDown.classList.remove('pressed');
       }
     break;
   }
