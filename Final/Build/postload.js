@@ -55,7 +55,24 @@ URLbtn.onclick = function() {
   }, 500);
 };
 
+/*Counter Animaiton*/
+const counter = document.getElementById('counter')
+
+function counteranimation(direction) {
+    counter.style.animation = "none"; 
+    void counter.offsetWidth;
+
+    if (direction === "increase") {
+      counter.style.animation = "numberIncrease 1s ease";
+    } else {
+      counter.style.animation = "numberDecrease 1s ease";
+    }
+  }
+
 /*Like Button + Counter*/
+const thumbsUp = document.getElementById('like');
+const thumbsDown = document.getElementById('dislike');
+
 let like_flag = false;
 let dislike_flag = false;
 function liked(event) {
@@ -67,16 +84,19 @@ function liked(event) {
         counter++;
         like_flag=true;
         thumbsUp.classList.add('pressed');
+        counteranimation("increase");
       } else if (like_flag==false && dislike_flag==true) {
         counter = counter + 2;
         like_flag=true;
         dislike_flag=false;
         thumbsUp.classList.add('pressed');
         thumbsDown.classList.remove('pressed');
+        counteranimation("increase");
       } else {
       	counter--;
         like_flag=false;
         thumbsUp.classList.remove('pressed');
+        counteranimation("decrease");
       }
     break;
     case 'fa fa-thumbs-down':
@@ -84,16 +104,19 @@ function liked(event) {
         counter--;
         dislike_flag=true;
         thumbsDown.classList.add('pressed');
+        counteranimation("decrease");
       } else if (dislike_flag==false && like_flag==true) {
         counter = counter - 2;
         dislike_flag=true;
         like_flag=false;
         thumbsDown.classList.add('pressed');
         thumbsUp.classList.remove('pressed');
+        counteranimation("decrease");
       } else {
       	counter++;
         dislike_flag=false;
         thumbsDown.classList.remove('pressed');
+        counteranimation("increase");
       }
     break;
   }
@@ -101,7 +124,4 @@ function liked(event) {
   
   document.getElementById('counter').innerHTML = counter;
 };
-
-const thumbsUp = document.getElementById('like');
-const thumbsDown = document.getElementById('dislike');
 

@@ -107,35 +107,6 @@ hr{
             text-align: right;
         }
 
-#likeCount{
-    display: flex;
-    align-items: center;
-}
-    .fa {
-        font-size: 1.5rem;
-        cursor: pointer;
-        -webkit-transition: color .5s;
-        -moz-transition:    color .5s;
-        -ms-transition:     color .5s;
-        -o-transition:      color .5s;
-        transition:         color .5s;
-    }
-        .fa:hover, .pressed{
-            color: rgb(36, 198, 9);
-        }
-        .ThumbsUpLink{
-            margin-bottom: .6rem;
-        }
-        .ThumbsDownLink{
-            margin-bottom: .3rem;
-        }
-    #counter{
-        color: rgb(36, 198, 9);
-        font-size: 1.25rem;
-        text-decoration: underline;
-        margin: 1.45rem .6rem 2.05rem;
-    }
-
     #shareContents{
         display: flex;
         align-items: center;
@@ -198,6 +169,58 @@ hr{
         display: none;
     }
 }
+
+/*like button*/
+#likeCount{
+    display: flex;
+    align-items: center;
+}
+    .fa {
+        font-size: 1.5rem;
+        cursor: pointer;
+        -webkit-transition: color .5s;
+        -moz-transition:    color .5s;
+        -ms-transition:     color .5s;
+        -o-transition:      color .5s;
+        transition:         color .5s;
+    }
+        .fa:hover, .pressed{
+            color: rgb(36, 198, 9);
+        }
+        .ThumbsUpLink{
+            margin-bottom: .6rem;
+        }
+        .ThumbsDownLink{
+            margin-bottom: .3rem;
+        }
+    #counter{
+        color: rgb(36, 198, 9);
+        font-size: 1.25rem;
+        text-decoration: underline;
+        margin: 1.45rem .6rem 2.05rem;
+    }
+
+    @keyframes numberIncrease {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    @keyframes numberDecrease {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
 
 /*share module*/
 .share-module{
@@ -282,7 +305,7 @@ hr{
         -webkit-transition: opacity 1s ease-in-out;
         z-index: 1;
         position: absolute;
-        top: -2.5rem;
+        top: -3rem;
     }
         .tooltip>p{
             display: flex;
