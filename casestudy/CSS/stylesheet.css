@@ -1,0 +1,67 @@
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    body{
+        margin: 2.5rem;
+    }
+
+/* Text */
+h1, h2, h3{
+    color: #6f5c9e;
+    margin-bottom: .5rem;
+}
+
+p{
+    font-size: 1.25rem;
+    margin: .5rem auto 1.5rem;
+}
+    .annotationNotes{
+        font-size: 1rem;
+    }
+
+    ul{
+        margin: 0;
+    }
+        li{
+            font-size: 1.2rem;
+        }
+
+    .underline{
+        text-decoration: underline;
+    }
+
+    .imgNumb{
+        font-size: 1.25rem;
+        margin-bottom: 0;
+    }
+
+hr{
+    margin: 1rem auto;
+}
+
+
+    img{
+        border: .2rem solid rgb(111, 92, 158);
+        width: 75%;
+        height: auto;
+        display: block;
+        margin: auto auto 1.5rem;
+    }
+
+
+@media screen and (min-width: 600px) {
+    body{
+        margin: auto 5rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body{
+        margin: auto 18rem;
+    }
+}
