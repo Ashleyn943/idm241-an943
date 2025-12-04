@@ -56,6 +56,7 @@ hr{
     height: 550px;
 }
 
+/*Lyrics*/
 .lyrics {
   background-color: white;
   width: 600px;
@@ -137,38 +138,36 @@ hr{
 .animate {
   animation: fadeIn 2s ease-out forwards;
 }
-
-@keyframes fadeIn {
-  from {
-    transform: translateX(0px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(600px);
-    opacity: 1;
-  }
-}
+    @keyframes fadeIn {
+    from {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(600px);
+        opacity: 1;
+    }
+    }
 
 .animateOut {
   animation: fadeOut 2s ease-out forwards;
 }
-
-@keyframes fadeOut {
-  from {
-    transform: translateX(600px);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 0;
-  }
-}
-
-@starting-style{
-    .animateOut {
-        display: none;
+    @keyframes fadeOut {
+    from {
+        transform: translateX(600px);
+        opacity: 1;
     }
-}
+    to {
+        transform: translateX(0px);
+        opacity: 0;
+    }
+    }
+
+    @starting-style{
+        .animateOut {
+            display: none;
+        }
+    }
 
 /*like button*/
 #likeCount{
@@ -295,8 +294,8 @@ hr{
             .unconfirmed{
                 opacity: 0;
             }
-/*Contributor Label*/
 
+/*Contributor Label*/
     .tooltip{
         background-color: lightgrey;
         border-radius: .5rem;
@@ -362,6 +361,7 @@ hr{
         height: auto;
         width: 9.5%;
     }
+
 @media screen and (min-width: 1000px) {
 #Build{
     margin: 2rem 0rem;
