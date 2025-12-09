@@ -17,7 +17,7 @@ h1, h2, h3{
 }
 
 p{
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: .5rem auto 1.5rem;
 }
     .annotationNotes{
@@ -28,7 +28,7 @@ p{
         margin: 0;
     }
         li{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
     .underline{
